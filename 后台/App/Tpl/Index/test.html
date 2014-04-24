@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	p = $.ajax({
+		url:"http://hudtest.sinaapp.com/Index/showData",
+		success: function(data) {
+			var p = data;
+			for (var i = 0; i < p.length; i++) {
+				document.writeln(p[i].content+":"+p[i].text2+"<br>");
+			};
+		}
+	})
+	</script>
+</body>
+</html>

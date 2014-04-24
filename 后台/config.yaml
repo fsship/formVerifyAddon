@@ -1,0 +1,6 @@
+handle:
+  - rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"
+  - hostaccess: if(path ~ "^/App") deny "all"
+  - hostaccess: if(path ~ "^/ThinkPHP") deny "all"
+  - hostaccess: if(path ~ "^/config.yaml") deny "all"
+  - hostaccess: if(path ~ "^/sae_app_wizard.xml") deny "all"
